@@ -1,0 +1,20 @@
+.Login-layout{
+    background-color: red;
+    border: 2px  gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin-top: 10%;
+}
+.section-login{
+    width: 50%;
+    background-color: white;
+}
+/* .button{
+    background-color: purple;
+    width: 50%;
+    padding: 2px;
+    margin: 10px 20px 10px 80px;
+} */
