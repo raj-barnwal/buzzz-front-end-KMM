@@ -31,7 +31,7 @@ const handleInput =(e) =>{
                     <span className='login-foot'>Forget Password?</span>
                 </div>
                 <div className='button-foot'>
-                <button className='button-foot-right'>Sign In</button>
+                <button type='submit' className='button-foot-right'>Sign In</button>
                 </div>               
             </div>
         </form>
