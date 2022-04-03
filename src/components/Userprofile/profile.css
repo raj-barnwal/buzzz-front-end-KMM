@@ -1,0 +1,26 @@
+.navigation-bar {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-pic{
+    padding: 5px;
+}
+.profile-pic img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.message-icon, .conatct-icon{
+  color: rgb(124, 124, 124);
+  font-size: 20px;
+  padding: 5px;
+    
+}
