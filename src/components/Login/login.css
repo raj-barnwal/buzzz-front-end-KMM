@@ -1,5 +1,5 @@
 .Login-layout{
-    background-color: red;
+    background-color: #ffffff;
     border: 2px  gray;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@
 }
 .section-login{
     width: 50%;
-    background-color: white;
+    background-color: #ffffff;
 }
 /* .button{
     background-color: purple;
