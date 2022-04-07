@@ -1,26 +1,20 @@
 import React from 'react'
 import './login.css';
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
 
 const Userlogin = () => {
-// // const {signin , handleSignin, errors} = useForm();
 const handleInput =(e) =>{
     console.log(e.target.value);
 }
-// const [userInfo , setUserInfo] =useState();
-
   return (
     <div className='container Login-layout'>
         <div className='section-login'>
             <div className='right-login'>
-        <form  >
-            
+        <form  >            
             <h1>Login To Your Account </h1>
             <div className='ui divider'></div>
             <div className='ui form'>
                 <div className='field'>
-                    <input type="text" name="username" placeholder='TTN Username' onChange={handleInput}/>
+                    <input type="email" name="email" placeholder='TTN Username' onChange={handleInput}/>
                 </div>
                 <div className='field'>
                     <input type="password" name="password" placeholder='Password' />
@@ -31,7 +25,7 @@ const handleInput =(e) =>{
                     <span className='login-foot-fp'>Forget Password ? </span>
                 </div>
                 <div className='signin-btn'>
-                <button type='submit' className=' btn'>Sign In</button>
+                <button type='submit' className=' btn' >Sign In</button>
                 </div>
                
             </div>

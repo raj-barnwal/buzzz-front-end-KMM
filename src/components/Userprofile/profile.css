@@ -1,9 +1,16 @@
 .navigation-bar {
     width: 100%;
-    padding: 5px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+}
+.header_logo{
+    margin: 28px 10px 0 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .user-details{
     display: flex;
@@ -18,9 +25,12 @@
     height: 30px;
     border-radius: 100%;
 }
-.message-icon, .conatct-icon{
+.nav-icon {
   color: rgb(124, 124, 124);
-  font-size: 20px;
+  margin-left: 10px;
+  background-color: #E7E7E7;
+  border-radius: 15px;
+  font-size: 22px;
   padding: 5px;
     
 }

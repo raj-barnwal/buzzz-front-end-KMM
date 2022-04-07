@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom'
 const Glogin = () => {
 
   return (
-   
-
-
     <div>
       <button onClick={signInWithGoogle} >Sign in with  google</button>
       {/* <Link to='/user'>Sign in with Google</Link> */}

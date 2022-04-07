@@ -1,0 +1,63 @@
+.rightbar{
+    flex:2.5;
+    /* background-color:blue; */
+    margin: 60px 0px 0 0px;
+}
+.rightWrapper{
+    padding: 20px ;
+}
+.rightContact {
+    background-color: white;
+    overflow-y: scroll;
+}
+.contacthead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchicon{
+    font-size: 20px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+}
+.rightProfileContainer{
+    position: relative;
+}
+.rightProfileimg{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.rightOnline{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: limegreen;
+    border: 2px solid white;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.addfriend{
+    cursor: pointer;
+    color:#84B6F8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rightContactList ,.suggestionList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.rightContactListItems , .suggestionListItems{
+    display: flex;
+    align-items: center;
+    margin-bottom:15px ;
+}
+.suggestion{
+    background-color: white;
+    margin-top:10px;
+    overflow-y: scroll;
+}
