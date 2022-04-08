@@ -9,9 +9,9 @@ const Post = () => {
     <div className='post'>
       <div className='postWraper'>
       <Share />
-      {Posts.map((p) =>{
-        <Story key={p.id} post={p}/>
-      })}
+      
+        <Story Post={Post}/>
+    
       <Story />
       
       

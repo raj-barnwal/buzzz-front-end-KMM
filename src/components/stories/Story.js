@@ -10,8 +10,8 @@ import { AiOutlineDislike} from 'react-icons/ai'
 import {GrLike }from 'react-icons/gr'
 import {BsCheck2Circle , BsFlagFill} from 'react-icons/bs'
 
-const Story = (post) => {
-    console.log(post);
+const Story = ({props}) => {
+    console.log(props.Post);
     const user= Users.filter((u) => u.id===1);
     // console.log(user[0].username);
     const [like ,setLike] =useState(2);
@@ -27,7 +27,7 @@ const Story = (post) => {
             <div className='left-story'>
                 <img src={Person} className='storyImg' alt='pic'/>
                 <span className='storyUser'>Sudesh </span>
-                <span className='storyDate'>{post.date}</span>
+                <span className='storyDate'></span>
             </div>
             <div className='right-story'>
                 <span className='story-icon-check'><BsCheck2Circle /></span>
