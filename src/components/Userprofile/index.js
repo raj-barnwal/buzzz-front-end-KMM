@@ -1,12 +1,12 @@
 import React from 'react';
-import ProfileHeader from './ProfileHeader';
+import Header 
 import './profile.css';
 import ProfileSetup from './ProfileSetup';
 
 const Profile = () => {
   return (
     <div>
-      <ProfileHeader/>
+      <Header/>
       <ProfileSetup />
     </div>
   )
