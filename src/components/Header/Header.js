@@ -12,9 +12,8 @@ const Header = () => {
         </div>
         <div className='user-details'>
             <div className='profile-pic'>
-                 <img src={localStorage.getItem('profilePic')}/>
-           
-            {localStorage.getItem('name')}
+                 <img className='profile-picImg' src={localStorage.getItem('profilePic')}/>
+                 {localStorage.getItem('name')}
             </div>
             <div className='nav-icon'>
                   <BsMessenger />
