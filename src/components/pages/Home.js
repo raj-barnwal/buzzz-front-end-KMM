@@ -2,14 +2,14 @@ import React from 'react'
 import RightsideBar from '../rightsidebar/RightsideBar'
 import Sidebar from '../sidebar/Sidebar'
 import Post from '../posts/Post'
-import ProfileHeader from '../Userprofile/ProfileHeader'
+import Header from '../Header/Header'
 import './Home.css'
 
 
 const Home = () => {
   return (
     <>
-    <ProfileHeader />
+    <Header />
     <div className='homeContainer'>
     <Sidebar />    
     <Post/>

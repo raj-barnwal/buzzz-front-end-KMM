@@ -1,0 +1,58 @@
+
+.navigation-bar {
+    width: 100%;
+    height: 60px;
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    position: sticky;
+    top:0;
+}
+.header_logo{
+    margin: 28px 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.user-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-pic{
+    padding: 5px;
+    
+}
+.profile-pic img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.nav-icon {
+  color: rgb(124, 124, 124);
+  margin-left: 15px;
+  background-color: #E7E7E7;
+  border-radius: 15px;
+  font-size: 22px;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.nav-iconbadge{
+    width: 17px;
+    height: 17px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

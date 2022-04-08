@@ -9,7 +9,6 @@ const Login = () => {
     <div className='container Login-layout'>
       <Gmaillogin />
       <Userlogin />
-      {/* <Glogin/> */}
      </div>
   )
 }

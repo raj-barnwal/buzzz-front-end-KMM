@@ -42,10 +42,32 @@ margin: 25px 0 0 20px ;
    padding: 10px;
    object-fit: contain;
 }
+.right-story{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .story-icon{
-    font-size: 26px;
+    font-size: 19px;
     background-color: #E9E9E9 ;
     border-radius: 20px;
+    padding: 4px;
+    margin-left: 7px;
+}
+.story-icon-flag{
+    font-size: 19px;
+    background-color: #E9E9E9 ;
+    border-radius: 20px;
+    color: red;
+    padding: 4px;
+    margin-left: 7px;
+}
+.story-icon-check{
+    font-size: 19px;
+    background-color: #E9E9E9 ;
+    border-radius: 20px;
+    color: green;
+    padding: 4px;
 }
 .bottomstory{
     display: flex;
@@ -80,19 +102,21 @@ margin: 25px 0 0 20px ;
     padding: 10px;
     
 }
+.bottom_icon{
+    cursor: pointer;
+}
 .commentsection{
 padding: 15px 10px 10px 10px;
 width: 100%;
 display: flex;
 align-items: center;
 }
-.profile{
+.profileimg{
     width: 30px;
     height:30px;
     border-radius: 50%;
     object-fit: cover;
 }
-
 .input{
     border: none;
     width:95%;

@@ -1,36 +1,82 @@
-.navigation-bar {
+.profileContainer{
+    display: flex;
+    /* background-color:#F0F2F5 ; */
+}
+.profileCenter{
+    width: 80%; 
+    margin: 20px 0 0 30px;
+    background-color: #F0F2F5;
+}
+.profileTop{
+    /* margin-left: 100px; */
+}
+.profileCover{
+    height: 320px;
+    position: relative;
+}
+.profileCoverImg{
     width: 100%;
-    height: 60px;
+    height: 80%;
+    object-fit: cover;
+}
+.profileUserImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    object-fit: cover;
+    position: absolute;
+    left: 10px;
+    /* margin: auto; */
+    top:150px;
+    border: 3px solid white;
+}
+.profileInfo{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+.profileInfoName{
+    font-size: 24px;
+    font-weight: 800;
+    padding: 0px 0 0px 20px;
+}
+.profileInfoDesc{
+    font-weight: 300;
+    padding: 10px 0 10px 20px;
+}
+.profileInfoDesc2{
+    font-weight: 100;
+    padding: 10px 0 0 20px;
+}
+.profilebutton{
+    margin-left: 20px;
+    padding-top: 10px;
+    display: flex;
+}
+.addbutton{
+    background-color: #407FD3;
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+}
+.visitbutton{
     background-color: white;
-    position: fixed;
-}
-.header_logo{
-    margin: 28px 10px 0 10px;
+    padding: 8px;
+    color: #407FD3;
+    margin-left: 10px;
+    border:2px solid #dfeaf3;
+    border-radius: 9px;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
-.user-details{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.profileicon ,.profilevisiticon{
+    font-size: 20px;
+    margin-right: 5px;
 }
-.profile-pic{
-    padding: 5px;
-}
-.profile-pic img{
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-}
-.nav-icon {
-  color: rgb(124, 124, 124);
-  margin-left: 10px;
-  background-color: #E7E7E7;
-  border-radius: 15px;
-  font-size: 22px;
-  padding: 5px;
-    
+.profileRight{
+   width: 20%;
 }
