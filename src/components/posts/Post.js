@@ -5,14 +5,15 @@ import Story from '../stories/Story'
 import {Posts} from '../../dummydata'
 
 const Post = () => {
+  console.log(Posts);
   return (
     <div className='post'>
       <div className='postWraper'>
       <Share />
-      
-        <Story Post={Post}/>
-    
-      <Story />
+      {/* {Posts.map((p) =>{
+        <Story key={p.id} post={p}/>
+      })} */}
+      <Story Post ={Posts}/>
       
       
 

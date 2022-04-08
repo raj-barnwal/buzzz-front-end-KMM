@@ -6,18 +6,18 @@ import { useState } from 'react';
 import { BrowserRouter  as Router, Route ,Routes} from 'react-router-dom';
 import Home from './components/pages/Home';
 import ProfileSetup from './components/Userprofile/ProfileSetup';
+import ProfileUpdate from './components/Userprofile/ProfileUpdate';
 
 function App() {
   return (
-    <div>
-       <Router>
-         <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route exact path='/login' element={<Login/>}/>
-        <Route exact path='/register' element={<Home/>}/>
-        <Route exact path='/profile/:username' element={<ProfileSetup/>}/>
-        </Routes>
-      </Router>
+    <div className="App">
+      <Route >
+      {/* <Login /> */}
+     {/* <Profile/> */}
+     <Home />
+     {/* <ProfileSetup /> */}
+     {/* <ProfileUpdate /> */}
+     </Route>
     </div>
 
       

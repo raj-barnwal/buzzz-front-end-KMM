@@ -16,7 +16,6 @@ const ProfileSetup = () => {
     <>
     <Header />
     <div className='profileContainer'>
-      {/* <Sidebar /> */}
     <div className='profileCenter'> 
     <div className='profileTop'>
       <div className='profileCover'>
