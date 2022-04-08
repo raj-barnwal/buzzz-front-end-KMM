@@ -8,9 +8,6 @@ import Home from './components/pages/Home';
 import ProfileSetup from './components/Userprofile/ProfileSetup';
 
 function App() {
-  
-
-  
   return (
     <div className="App">
       <Route >

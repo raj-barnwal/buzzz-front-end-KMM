@@ -1,4 +1,4 @@
-.rightbar{
+.rightbarContainer{
     flex:2.5;
 }
 .rightWrapper{
@@ -54,8 +54,7 @@
     align-items: center;
     margin-bottom:15px ;
 }
-.suggestion{
+.suggestionContainer{
     background-color: white;
     margin-top:10px;
-    overflow-y: scroll;
 }
