@@ -8,6 +8,7 @@
     background-color: white;
     position: sticky;
     top:0;
+    z-index: 100;
 }
 .header_logo{
     margin: 28px 10px 0 10px;

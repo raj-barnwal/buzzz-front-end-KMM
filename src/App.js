@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { BrowserRouter  as Route, Routes, Link } from 'react-router-dom';
 import Home from './components/pages/Home';
 import ProfileSetup from './components/Userprofile/ProfileSetup';
+import ProfileUpdate from './components/Userprofile/ProfileUpdate';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       <Route >
       {/* <Login /> */}
      {/* <Profile/> */}
-     {/* <Home /> */}
-     <ProfileSetup />
+     <Home />
+     {/* <ProfileSetup /> */}
+     {/* <ProfileUpdate /> */}
      </Route>
     </div>
   );
