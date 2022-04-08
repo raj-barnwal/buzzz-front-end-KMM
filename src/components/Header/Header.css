@@ -23,14 +23,17 @@
 }
 .profile-pic{
     padding: 5px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.profile-pic img{
-    width: 32px;
-    height: 32px;
+.profile-picImg{
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+    margin: 10px;
 }
 .nav-icon {
   color: rgb(124, 124, 124);

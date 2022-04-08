@@ -8,6 +8,8 @@ import Post_d from '../../assets/images/post4.jpg'
 import Person_a from '../../assets/images/person2.png'
 import {MdPersonAddAlt1} from 'react-icons/md'
 import {FiExternalLink} from 'react-icons/fi'
+import {BsDot} from 'react-icons/bs'
+
 
 const ProfileSetup = () => {
   return (
@@ -24,7 +26,7 @@ const ProfileSetup = () => {
       <div className='profileInfo'>
         <h4 className='profileInfoName'>Sarah Wood </h4>
         <span className='profileInfoDesc'>Sarah Wood is Co-founder of Video and tech company </span>
-        <span className='profileInfoDesc2'> London. England . United Kingdom .234 friends </span>
+        <span className='profileInfoDesc2'> London<BsDot /> England <BsDot /> United Kingdom <BsDot />234 friends </span>
       </div>
       <div className='profilebutton'>
         <button className='addbutton'><MdPersonAddAlt1 className='profileIcon'/>Add Friend</button>
@@ -33,7 +35,6 @@ const ProfileSetup = () => {
     </div>
     </div> 
     <div className='profileRight'>
-      {/* <Story /> */}
       <RightsideBar />
     </div>
     
