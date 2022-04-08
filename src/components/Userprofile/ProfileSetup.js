@@ -27,8 +27,8 @@ const ProfileSetup = () => {
         <span className='profileInfoDesc2'> London. England . United Kingdom .234 friends </span>
       </div>
       <div className='profilebutton'>
-        <button className='addbutton'><MdPersonAddAlt1 className='profileicon'/>Add Friend</button>
-        <button className='visitbutton'><FiExternalLink className='profilevisiticon'/>Visit Website</button>
+        <button className='addbutton'><MdPersonAddAlt1 className='profileIcon'/>Add Friend</button>
+        <button className='visitbutton'><FiExternalLink className='profileVisitIcon'/>Visit Website</button>
       </div>
     </div>
     </div> 

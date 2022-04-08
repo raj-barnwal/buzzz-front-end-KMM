@@ -1,5 +1,5 @@
 import React from 'react';
-import Header 
+import Header from '../Header/Header';
 import './profile.css';
 import ProfileSetup from './ProfileSetup';
 
