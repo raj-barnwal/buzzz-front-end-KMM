@@ -23,7 +23,14 @@ const Header = () => {
                   <span className='nav-iconbadge'> 2</span>
             </div>
             <div className='nav-icon'>
-              <BsThreeDotsVertical />
+              <div class="dropdown">
+  <button><BsThreeDotsVertical /></button>
+  <div class="dropdown-content">
+  <a href="/Userprofile/ProfileUpdate.js">Edit Profile</a>
+  <a href="/">Settings </a>
+  <a href="/Login/Userlogin.js">LogOut</a>
+  </div>
+</div>
             </div>
         </div>
      

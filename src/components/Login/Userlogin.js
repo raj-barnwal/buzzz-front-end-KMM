@@ -5,6 +5,9 @@ const Userlogin = () => {
 const handleInput =(e) =>{
     console.log(e.target.value);
 }
+const handleLogin =() => {
+    
+}
   return (
     <div className='container Login-layout'>
         <div className='section-login'>
@@ -25,7 +28,7 @@ const handleInput =(e) =>{
                     <span className='login-foot-fp'>Forget Password ? </span>
                 </div>
                 <div className='signin-btn'>
-                <button type='submit' className=' btn' >Sign In</button>
+                <button type='submit' className=' btn' onClick={handleLogin}>Sign In</button>
                 </div>
                
             </div>

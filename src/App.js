@@ -14,9 +14,9 @@ function App() {
       <Route >
       {/* <Login /> */}
      {/* <Profile/> */}
-     <Home />
+     {/* <Home /> */}
      {/* <ProfileSetup /> */}
-     {/* <ProfileUpdate /> */}
+     <ProfileUpdate />
      </Route>
     </div>
   );
