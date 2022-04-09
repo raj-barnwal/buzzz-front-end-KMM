@@ -3,12 +3,16 @@ import Ttnlogo from '../../assets/images/Ttn_logo(1).png'
 import {BsMessenger ,BsThreeDotsVertical} from 'react-icons/bs'
 import {HiUserAdd} from 'react-icons/hi'
 import './Header.css'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <div className='navigation-bar'>
         <div className='logo'>
-            <img className='header_logo' src={Ttnlogo} alt='logo'/>
+          <Link to='/'>
+            
+             <img className='header_logo' src={Ttnlogo} alt='logo'/>
+          </Link>
         </div>
         <div className='user-details'>
             <div className='profile-pic'>

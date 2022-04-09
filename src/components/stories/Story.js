@@ -43,13 +43,13 @@ const Story = () => {
                                 <img className='storypost' src={item.photo} alt='First post'/>
                             </div>
                             <div className='bottomstory'>
-                                <GrLike className='likeicon'onClick={likeHandler} /><span>{item.like} liked it</span>
+                                <GrLike className='likeicon'onClick={likeHandler} /><span>{like} liked it</span>
                                 <BiHeartCircle className='hearticon'/>
                                 <span className='comicon'>{item.comment} comment</span>
                              </div> 
                             <div className='icons'>
                                     <span className='bottom_icon'><GrLike className='icon1' onClick={likeHandler}/> Like</span>
-                                    <span className='bottom_icon'><AiOutlineDislike className='icon2'  onClick={likeHandler}/> Dislike</span>
+                                    {/* <span className='bottom_icon'><AiOutlineDislike className='icon2'  onClick={likeHandler}/> Dislike</span> */}
                                     <span className='bottom_icon'><GoComment className='icon3'  onClick={likeHandler}/> Comment</span>
                             </div>
                             <div className='commentsection'>
