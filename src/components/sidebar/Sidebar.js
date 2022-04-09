@@ -15,7 +15,7 @@ const Sidebar = () => {
     <div className='sidebar'>
       <div className='sideWrapper'>
         <div className='sideprofile'>
-      <div class="card">
+      {/* <div class="card">
            <img src={Person_a} class="cardimg" alt="..." />
            <div class="card-body">
              <h5 class="card-title ">Emma </h5>
@@ -24,7 +24,7 @@ const Sidebar = () => {
                <span className='profile_bottom'>236 Portal Visitor</span> 
                <span className='profile_bottom'>10 Post</span></div>
              </div>
-         </div>
+         </div> */}
       </div>
     
      Recents

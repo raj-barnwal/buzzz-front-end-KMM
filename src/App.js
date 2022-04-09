@@ -3,7 +3,7 @@ import './App.css';
 import Login from './components/Login'
 import Profile from './components/Userprofile';
 import { useState } from 'react';
-import { BrowserRouter  as Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter  as Router, Route ,Routes} from 'react-router-dom';
 import Home from './components/pages/Home';
 import ProfileSetup from './components/Userprofile/ProfileSetup';
 import ProfileUpdate from './components/Userprofile/ProfileUpdate';
@@ -11,14 +11,22 @@ import ProfileUpdate from './components/Userprofile/ProfileUpdate';
 function App() {
   return (
     <div className="App">
-      <Route >
-      {/* <Login /> */}
-     {/* <Profile/> */}
-     {/* <Home /> */}
-     {/* <ProfileSetup /> */}
-     <ProfileUpdate />
-     </Route>
+ 
+      {/* <Router>
+         <Routes>
+          <Route exact path='/' element={<Home/>}/>
+          <Route exact path='/login' element={<Login/>}/>
+          <Route exact path='/register' element={<Home/>}/>
+          <Route exact path='/profile/:username' element={<ProfileSetup/>}/>
+          <Route exact path='/profile/update' element={<ProfileUpdate/>}/>
+        </Routes>
+      </Router> */}
+      <ProfileUpdate />
     </div>
+
+      
+  
+  
   );
 }
 

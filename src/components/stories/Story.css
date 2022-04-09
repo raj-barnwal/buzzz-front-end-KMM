@@ -1,4 +1,4 @@
-.story{
+.storyContainer{
     width: 95%;
     border-radius: 10px;
     background-color: white;
@@ -42,6 +42,7 @@ margin: 25px 0 0 20px ;
    padding: 10px;
    object-fit: contain;
 }
+
 .right-story{
     display: flex;
     align-items: center;

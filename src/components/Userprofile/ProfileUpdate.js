@@ -9,7 +9,9 @@ import Webcam from './Webcam'
 
 
 const ProfileUpdate = () => {
-    const handleReset =() =>{}
+    const handleReset =() =>{
+      document.getElementsByClassName('form').reset();
+    }
   return (
     <>
     <Header />
@@ -46,7 +48,6 @@ const ProfileUpdate = () => {
 
   <label for="gender">Gender
   <span className='radio-btn'>
-    {/* <input type="radio" name="gender"/> */}
     <button type="radio">Male</button> 
     <button type="radio">Female</button>
      </span>
@@ -63,10 +64,8 @@ const ProfileUpdate = () => {
 
   <label for="zip">ZIP</label>
   <input type="number" id="zip" placeholder="ZIP" name="zip" />
-
   
 </form>
-
       </div>
       <div className='profilebutton'>
         <button className='savebutton'>Save</button>
@@ -77,7 +76,6 @@ const ProfileUpdate = () => {
     <div className='profileRight'>
       <RightsideBar />
     </div>
-    
     </div>  
     </>
   )
