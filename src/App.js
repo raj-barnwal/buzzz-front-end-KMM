@@ -11,13 +11,15 @@ import ProfileUpdate from './components/Userprofile/ProfileUpdate';
 function App() {
   return (
     <div className="App">
-      <Route >
-      {/* <Login /> */}
-     {/* <Profile/> */}
-     <Home />
-     {/* <ProfileSetup /> */}
-     {/* <ProfileUpdate /> */}
-     </Route>
+ 
+      <Router>
+         <Routes>
+          <Route exact path='/' element={<Home/>}/>
+          <Route exact path='/login' element={<Login/>}/>
+          <Route exact path='/register' element={<Home/>}/>
+          <Route exact path='/profile/:username' element={<ProfileSetup/>}/>
+        </Routes>
+      </Router>
     </div>
 
       
