@@ -10,6 +10,7 @@ import { AiOutlineDislike} from 'react-icons/ai'
 import {GrLike }from 'react-icons/gr'
 import {BsCheck2Circle , BsFlagFill} from 'react-icons/bs'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 
 const Story = (props) => {
@@ -45,7 +46,10 @@ const Story = (props) => {
                         <div className='storyWrapper'>
                             <div className='top-story'>
                                 <div className='left-story'>
-                                   <img src={ Profilepic1} className='storyImg' alt='pic'/>
+                                    <Link to={`/profile/${user.name}`}>
+                                    <img src={ Profilepic1} className='storyImg' alt='pic'/>
+                                    </Link>
+                                   
                                    <span className='storyUser'>{user.name}</span>
                                    <span className="storyDate">{item?.date}</span>
                                 </div>

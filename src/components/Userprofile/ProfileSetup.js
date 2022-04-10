@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import './profile.css'
 import RightsideBar from '../rightsidebar/RightsideBar'
 import Story from '../stories/Story'
@@ -9,9 +9,19 @@ import Person_a from '../../assets/images/person2.png'
 import {MdPersonAddAlt1} from 'react-icons/md'
 import {FiExternalLink} from 'react-icons/fi'
 import {BsDot} from 'react-icons/bs'
+import axios from 'axios'
 
 
 const ProfileSetup = () => {
+  const [user, setUser]=useState({})
+  useEffect(()=>{
+    const fetchUser= async()=>{
+      const result =await axios.get(`http://localhost:5000/api/users/6251871b34db952c4ebf5928`);
+      console.log("from user",result);
+      setUser(result.data);
+    };
+    fetchUser();
+  },[])
   return (
     <>
     <Header />
@@ -23,9 +33,9 @@ const ProfileSetup = () => {
       <img src={Person_a} className='profileUserImg' alt='' />
       </div>
       <div className='profileInfo'>
-        <h4 className='profileInfoName'>Sarah Wood </h4>
-        <span className='profileInfoDesc'>Sarah Wood is Co-founder of Video and tech company </span>
-        <span className='profileInfoDesc2'> London<BsDot /> England <BsDot /> United Kingdom <BsDot />234 friends </span>
+        <h4 className='profileInfoName'>{user.name} </h4>
+        <span className='profileInfoDesc'>{user.description} </span>
+        <span className='profileInfoDesc2'> London<BsDot /> {user.city} <BsDot /> {user.hometown} <BsDot />{user.followers.length} followers </span>
       </div>
       <div className='profilebutton'>
         <button className='addbutton'><MdPersonAddAlt1 className='profileIcon'/>Add Friend</button>
