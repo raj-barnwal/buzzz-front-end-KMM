@@ -13,15 +13,15 @@ import axios from 'axios'
 
 
 const ProfileSetup = () => {
-  const [user, setUser]=useState({})
+  const [userProfile, setUserProfile]=useState({})
   useEffect(()=>{
     const fetchUser= async()=>{
       const result =await axios.get(`http://localhost:5000/api/users/6251871b34db952c4ebf5928`);
       console.log("from user",result);
-      setUser(result.data);
+      setUserProfile(result.data);
     };
     fetchUser();
-  },[])
+  },[userProfile])
   return (
     <>
     <Header />
@@ -33,9 +33,9 @@ const ProfileSetup = () => {
       <img src={Person_a} className='profileUserImg' alt='' />
       </div>
       <div className='profileInfo'>
-        <h4 className='profileInfoName'>{user.name} </h4>
-        <span className='profileInfoDesc'>{user.description} </span>
-        <span className='profileInfoDesc2'> London<BsDot /> {user.city} <BsDot /> {user.hometown} <BsDot />{user.followers.length} followers </span>
+        <h4 className='profileInfoName'>{userProfile.name} </h4>
+        <span className='profileInfoDesc'>{userProfile.description} </span>
+        <span className='profileInfoDesc2'> London<BsDot /> {userProfile.city} <BsDot /> {userProfile.hometown} <BsDot />{userProfile?.followers?.length} followers </span>
       </div>
       <div className='profilebutton'>
         <button className='addbutton'><MdPersonAddAlt1 className='profileIcon'/>Add Friend</button>

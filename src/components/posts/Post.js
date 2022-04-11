@@ -11,7 +11,7 @@ const Post = () => {
   const [post, setPost]= useState([]);
   useEffect(()=>{
     const fetchPosts= async()=>{
-      const result =await axios.get("http://localhost:5000/api/posts/feed/6251871b34db952c4ebf5928");
+      const result =await axios.get("http://localhost:5000/api/posts/feed/625186e234db952c4ebf5926");
       console.log("posts",result);
       setPost(result.data);
     };

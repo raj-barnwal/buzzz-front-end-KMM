@@ -11,6 +11,7 @@ import {GiSharpShuriken} from 'react-icons/gi'
  import Person_a from '../../assets/images/person2.png'
  
 const Sidebar = () => {
+  
   return (
     <div className='sidebar'>
       <div className='sideWrapper'>
