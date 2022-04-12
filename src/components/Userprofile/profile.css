@@ -1,9 +1,10 @@
 .profileContainer ,.profileUpdationContainer{
     display: flex;
     background-color: #F0F2F5;
+    /* background-color: blue; */
 }
-.profileCenter{
-    width: 50%; 
+.profileCenter, .profileUpdateForm{
+    width: 70%; 
     margin: 20px 0 50px 100px;
     background-color: white;
     border-radius: 15px;
@@ -71,50 +72,57 @@
     border-radius: 9px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .profileIcon ,.profileVisitIcon{
     font-size: 20px;
     margin-right: 5px;
 }
 .profileRight{
-   width: 20%;
+   width: 25%;
 }
 
 .webcamIcon{
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 50%;
     border: 2px solid #B5D3FB;
     position:absolute ;
     left: 160px;
     top: 260px;
-    padding: 10px;
+    padding: 8px;
+    cursor: pointer;
+    color: black;
+}
+.webcamContainer{
+  width: 100%;
+  height: 500px;
 }
 .updateForm{
     display: flex; 
-    width: 60%; 
+    width: 80%; 
     margin: 10px 0 0 35px;   
 }
 .form-inline {  
     display: flex;
     flex-flow:column wrap;
     align-items: flex-start;
-    width: 90%;
+    width: 100%;
     height: 400px;
   }
   
   .form-inline label {
-    margin: 5px 10px 5px 0;
+    margin: 10px 70px 5px 0;
   }
   
   .form-inline input {
     vertical-align: middle;
     width: 280px;
-    height: 40px;
-    margin: 5px 10px 5px 0;
+    height: 50px;
+    margin: 5px 0px 5px 0;
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 2px;
   }
   .form-inline select {
     vertical-align: middle;
@@ -125,27 +133,66 @@
     border: 1px solid #ddd;
     border-radius: 5px;
   }
-  .form-inline button {
-    padding: 15px ;
-    border: 1px solid #ddd;
-    color: black;
-    cursor: pointer;
-    border: none;
-    background-color: rgb(253, 253, 253);
-  }
-  
-  .form-inline button:hover {
-    background-color: #90DCEF;
-    border-radius: 5px ;
-  }
   .radio-btn{
-      padding: 15px;
-      border-radius: 5px;
-      margin: 10px;
-      border: 1px solid #bdbdbd;
- }
+    width:37%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display:flex;
+    justify-content:center;
+  }
+  .sqre-radio {
+    display:block;
+    position: relative;
+    padding: 7px 0px 7px 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .sqre-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
   
-  @media (max-width: 800px) {
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 35px;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  .sqre-radio:hover input ~ .checkmark {
+    background-color: #A4FBF5;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .sqre-radio input:checked ~ .checkmark:after {
+    /* display: block; */
+  }
+  .sqre-radio .checkmark:after {
+       top: 3px; 
+      left: auto;
+  /*   width: 50px;
+    height: 30px; */
+    border-radius: 5px;
+  }
+  label span:first-of-type {
+    position: relative;
+    left: 30px;
+    top: 0px;
+    color: #1FBED6;
+    z-index:1;
+    color:black;
+  }
+@media (max-width: 800px) {
     .form-inline input {
       margin: 10px 0;
     }

@@ -12,7 +12,7 @@ const RightsideBar = ({profile}) => {
       <div className='rightbarConatiner'>
       <div className='rightWrapper'>
         <div className='rightContact'>
-          <h4 className='contacthead'>Contact
+          <h4 className='ContactHead'>Contact
           <BiSearch className='searchicon'/></h4>
           <ul className='rightContactList'>
             {Users.map((item)=>(
@@ -29,10 +29,11 @@ const RightsideBar = ({profile}) => {
        
         </div>
         <div className='suggestionContainer'>
-          <h4 className='rightContact'>Suggestions</h4>
-          <ul className='rightContactList'>
+          <div className='rightSuggestion'>
+          <h4 className='SuggestionHead'>Suggestions</h4>
+          <ul className='rightSuggestionList'>
             {Users.map((item)=>(
-               <li className='rightContactListItems'>
+               <li className='rightSuggestionListItems'>
                <div className='rightProfileContainer'>
                  <img src={item.profilePicture} className='rightProfileimg' alt=''/>
                  <span className='rightOnline'></span>
@@ -42,7 +43,7 @@ const RightsideBar = ({profile}) => {
             ))}
            
           </ul>
-         
+         </div>
         </div>
         
       </div>

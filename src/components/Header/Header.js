@@ -30,9 +30,9 @@ const Header = () => {
               <div class="dropdown">
   <button><BsThreeDotsVertical /></button>
   <div class="dropdown-content">
-  <a href="/Userprofile/ProfileUpdate.js">Edit Profile</a>
-  <a href="/">Settings </a>
-  <a href="/Login/Userlogin.js">LogOut</a>
+  <Link to="/profile/update">Edit Profile</Link>
+  <Link to="/">Settings </Link>
+  <Link to="/login">LogOut</Link>
   </div>
 </div>
             </div>
