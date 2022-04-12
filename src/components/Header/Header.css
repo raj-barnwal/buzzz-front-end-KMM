@@ -38,13 +38,17 @@
 }
 .nav-icon {
   color: rgb(124, 124, 124);
-  margin-left: 15px;
+  margin-left: 10px;
   background-color: #E7E7E7;
   border-radius: 15px;
   font-size: 22px;
   padding: 5px;
   position: relative;
   cursor: pointer;
+}
+.nav-icon-dot{
+  background-color:#E7E7E7 ;
+  font-size: 22px;
 }
 .nav-iconbadge{
     width: 17px;
@@ -74,7 +78,6 @@
     left: -70px;
     width: 150px;
     height: 100px;
-    overflow: auto;
     background-color: white;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
   }

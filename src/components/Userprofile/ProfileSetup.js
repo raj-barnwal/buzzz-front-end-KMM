@@ -1,8 +1,6 @@
 import React, { useEffect, useReducer, useState } from 'react'
 import './profile.css'
 import RightsideBar from '../rightsidebar/RightsideBar'
-import Story from '../stories/Story'
-import Sidebar from '../sidebar/Sidebar'
 import Header from '../Header/Header'
 import Post_d from '../../assets/images/post4.jpg'
 import Person_a from '../../assets/images/person2.png'

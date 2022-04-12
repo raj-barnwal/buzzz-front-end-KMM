@@ -11,7 +11,7 @@ const Userlogin = () => {
 const handleChange =(e) =>{
     const{name, value} =e.target;
     setFormValues({...formValues ,[name]:value});
-    console.log(formValues);  
+    // console.log(formValues);  
 }
 const handleSubmit =(e) =>{
     e.preventDefault();

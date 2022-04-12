@@ -86,6 +86,9 @@ margin: 25px 0 0 20px ;
     font-size: 22px;
     cursor: pointer;
 }
+.likeicon,.icon1::after{
+    color:#54A6F3 ;
+}
 .comicon{
     margin-left: auto;
     font-size: 16px;
