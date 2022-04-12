@@ -22,14 +22,14 @@ const Story = (props) => {
     useEffect(()=>{
 
       fetchUser();
-    },[user])
+    },[])
 
-    const fetchUser= async()=>{
-        // props.post.map((item)=>{
-        //    console.log("this is testing",item)
-        // })
-        const result =await axios.get(`http://localhost:5000/api/users/625186e234db952c4ebf5926`);
-        setUser(result.data);
+    const fetchUser= ()=>{
+        props.post.map(async(item)=>{
+            const result =await axios.get(`http://localhost:5000/api/users/${item.userId}`);
+            setUser(result.data);
+        })
+        
     };
 
     const getLikeFeedInfo=()=>{

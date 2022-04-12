@@ -2,23 +2,55 @@ import logo from './logo.svg';
 import './App.css';
 import Login from './components/Login'
 import Profile from './components/Userprofile';
-import { useState } from 'react';
-import { BrowserRouter  as Router, Route ,Routes} from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import { BrowserRouter  as Router, Route ,Routes, NavLink} from 'react-router-dom';
 import Home from './components/pages/Home';
 import ProfileSetup from './components/Userprofile/ProfileSetup';
 import ProfileUpdate from './components/Userprofile/ProfileUpdate';
 
 function App() {
+    // const[userProfile, setUserProfile]= useState({})
+
+     
+   
+    //     useEffect(()=>{
+    //       console.log("user Profile",userProfile)
+    //     })
+    const [isUser, setIsUser]= useState(true);
+  //   const[userProfile, setUserProfile]= useState({});
+  
+  //   setUserProfile({
+  //     name: localStorage.getItem('name'),
+  //     profilePic: localStorage.getItem('profilePic')
+      
+  // })
+
+
   return (
     <div className="App">
  
       <Router>
-         <Routes>
+        {isUser? 
+        (<>
+        <Routes>
           <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/login' element={<Login/>}/>
-          <Route exact path='/register' element={<Home/>}/>
-          <Route exact path='/profile/:username' element={<ProfileSetup/>}/>
-        </Routes>
+          
+          </Routes>
+          </>):
+           (<>
+            <Routes>
+              <Route exact path='/' element={<Login/>}/>
+             
+              </Routes>
+              </>)
+      }
+        {/* //  <Routes>
+        //   <Route exact path='/' element={<Home/>}/>
+        
+        //   <Route exact path='/login' element={ <Login/>}/>
+        //   <Route exact path='/register' element={<Home/>}/>
+        //   <Route exact path='/profile/:username' element={<ProfileSetup/>}/>
+        // </Routes> */}
       </Router>
     </div>
 
