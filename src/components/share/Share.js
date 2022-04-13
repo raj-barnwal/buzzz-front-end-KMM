@@ -35,9 +35,7 @@ const Share = () => {
         }catch(err){
 
         }
-
 }
-    
   return (
     <div className='share'>
         <div className='shareWrapper'>
@@ -51,7 +49,6 @@ const Share = () => {
                             <span className='shareOptionText'>Photo / Video</span>
                             <input
                                 className='input-share'
-                                
                                 type="file"
                                 id="file"
                                 accept=".png,.jpeg,.jpg"
