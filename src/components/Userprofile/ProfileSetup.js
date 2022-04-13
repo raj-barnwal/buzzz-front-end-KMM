@@ -1,6 +1,8 @@
 import React, { useEffect, useReducer, useState } from 'react'
 import './profile.css'
 import RightsideBar from '../rightsidebar/RightsideBar'
+import Story from '../stories/Story'
+import Sidebar from '../sidebar/Sidebar'
 import Header from '../Header/Header'
 import Post_d from '../../assets/images/post4.jpg'
 import Person_a from '../../assets/images/person2.png'
@@ -33,7 +35,7 @@ const ProfileSetup = () => {
       <div className='profileInfo'>
         <h4 className='profileInfoName'>{userProfile.name} </h4>
         <span className='profileInfoDesc'>{userProfile.description} </span>
-        <span className='profileInfoDesc2'> <BsDot /> {userProfile.city} <BsDot /> {userProfile.hometown} <BsDot />{userProfile?.followers?.length} followers </span>
+        <span className='profileInfoDesc2'> London<BsDot /> {userProfile.city} <BsDot /> {userProfile.hometown} <BsDot />{userProfile?.followers?.length} followers </span>
       </div>
       <div className='profilebutton'>
         <button className='addbutton'><MdPersonAddAlt1 className='profileIcon'/>Add Friend</button>

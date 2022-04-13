@@ -1,4 +1,4 @@
-import React ,{useState, useEffect}from 'react';
+import React ,{useState, useEffect, useContext}from 'react';
 import './Sidebar.css';
 import {HiHashtag} from 'react-icons/hi'
 import {BsCalendarDateFill} from 'react-icons/bs'
@@ -10,18 +10,22 @@ import {GiSharpShuriken} from 'react-icons/gi'
  import Person_a from '../../assets/images/person2.png'
  import Post_d from '../../assets/images/post4.jpg'
  import axios from 'axios';
+import { AuthContext } from '../../context/AuthContext';
 
  
 const Sidebar = () => {
-  const [userProfile, setUserProfile]=useState({})
-  useEffect(()=>{
-    const fetchUser= async()=>{
-      const result =await axios.get(`http://localhost:5000/api/users/6251871b34db952c4ebf5928`);
-      console.log("from user",result);
-      setUserProfile(result.data);
-    };
-    fetchUser();
-  },[userProfile])
+  const{user}=useContext(AuthContext)
+  console.log(user)
+  const PF= process.env.REACT_APP_PUBLIC_FOLDER;
+  // const [userProfile, setUserProfile]=useState({})
+  // useEffect(()=>{
+  //   const fetchUser= async()=>{
+  //     const result =await axios.get(`http://localhost:5000/api/users/6251871b34db952c4ebf5928`);
+  //     console.log("from user",result);
+  //     setUserProfile(result.data);
+  //   };
+  //   fetchUser();
+  // },[])
   
   return (
     <div className='sidebarContainer'>
@@ -29,12 +33,12 @@ const Sidebar = () => {
         <div className='sideprofile'>
       <div className="profileCard">
       <div className='profileCardCover'>
-      <img src={Post_d} className="profileCardCoverImg" alt=''/>
-      <img src={Person_a} className='profileCardUserImg' alt='' />
+      <img src={PF+user.profilePicture} className="profileCardCoverImg" alt=''/>
+      <img src={PF+user.profilePicture} className='profileCardUserImg' alt='' />
       </div>
       <div className='profileCardInfo'>
-        <h4 className='profileCardInfoName'>{userProfile.name} </h4>
-        <span className='profileCardInfoDesc'>{userProfile.description} </span>
+        <h4 className='profileCardInfoName'>{user.name} </h4>
+        <span className='profileCardInfoDesc'>{user.description? user.description : `Hey from ${user.name}`} </span>
       </div>
          </div>
       </div>
