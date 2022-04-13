@@ -1,4 +1,4 @@
-.story{
+.storyContainer{
     width: 95%;
     border-radius: 10px;
     background-color: white;
@@ -85,6 +85,9 @@ margin: 25px 0 0 20px ;
     color: #54A6F3;
     font-size: 22px;
     cursor: pointer;
+}
+.likeicon,.icon1::after{
+    color:#54A6F3 ;
 }
 .comicon{
     margin-left: auto;

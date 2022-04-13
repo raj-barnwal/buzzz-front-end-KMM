@@ -1,21 +1,20 @@
-.right-side-info{
-    width: 20%;
-  
-}
+/* .right-side-info{
+    width: 100%;
+} */
 .rightbarContainer{
-    flex:3;
+    width: 20%;
     padding: 5px;
 }
 .rightWrapper{
     padding: 20px ;
     width: 100%;
 }
-.rightContact {
+.rightContact ,.rightSuggestion {
     padding: 5px;
     background-color: white;
     overflow-y: scroll;
 }
-.contacthead{
+.ContactHead ,  .SuggestionHead{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,19 +46,21 @@
 .addfriend{
     cursor: pointer;
     color:#84B6F8;
+    padding-left: 90px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.rightContactList ,.suggestionList{
+.rightContactList ,.rightSuggestionList{
     padding: 0;
     margin: 0;
     list-style: none;
 }
-.rightContactListItems , .suggestionListItems{
+.rightContactListItems , .rightSuggestionListItems{
     display: flex;
     align-items: center;
     margin-bottom:15px ;
+    cursor:pointer;
 }
 .suggestionContainer{
     background-color: white;

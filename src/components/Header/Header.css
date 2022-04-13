@@ -20,7 +20,7 @@
 .user-details{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .profile-pic{
     padding: 5px;
@@ -38,13 +38,17 @@
 }
 .nav-icon {
   color: rgb(124, 124, 124);
-  margin-left: 15px;
+  margin-left: 10px;
   background-color: #E7E7E7;
   border-radius: 15px;
   font-size: 22px;
   padding: 5px;
   position: relative;
   cursor: pointer;
+}
+.nav-icon-dot{
+  background-color:#E7E7E7 ;
+  font-size: 22px;
 }
 .nav-iconbadge{
     width: 17px;
@@ -60,3 +64,33 @@
     align-items: center;
     justify-content: center;
 }
+.dropdown {
+    display: inline-block;
+    position: relative;
+    background-color: white;
+  }
+  .dropdown-content {
+    display: none;
+    font-size: 14px;
+    padding: 5px;
+    position: absolute;
+    top:30px;
+    left: -70px;
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+  }
