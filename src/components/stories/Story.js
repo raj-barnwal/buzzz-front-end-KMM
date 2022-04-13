@@ -65,7 +65,7 @@ const Story = (props) => {
                             </div>
                             <div className='centerstory'>
                                 <span className='storyText'>{item?.description}</span>
-                                <img className='storypost' src={PF + item?.image} />
+                                {<img className='storypost' src={PF + item?.image} />}
                             </div>
                             <div className='bottomstory'>
                                 <GrLike className='likeicon'onClick={getLikeFeedInfo} /><span>{likeFeed} liked it</span>

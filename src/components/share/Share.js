@@ -6,7 +6,7 @@ import { async } from '@firebase/util'
 import axios from 'axios'
 
 const Share = () => {
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+//    const PF = process.env.REACT_APP_PUBLIC_FOLDER; 
     const desc = useRef();
     const [file, setFile] = useState(null);
     const clickhandler=async(e)=>{

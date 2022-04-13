@@ -69,6 +69,8 @@ function App() {
            <Route path='/login' element={ <Login/>}/>
            <Route  path='/register' element={<Home/>}/>
            <Route  path='/profile/:username' element={<ProfileSetup/>}/>
+           <Route exact path='/profile/update' element={<ProfileUpdate/>}/>
+          <Route exact path='/profile/update/webcam' element={<Webcam/>}/>
          </Routes>
       </Router>
     </div>

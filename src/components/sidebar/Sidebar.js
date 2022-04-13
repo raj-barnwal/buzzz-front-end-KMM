@@ -21,7 +21,7 @@ const Sidebar = () => {
       setUserProfile(result.data);
     };
     fetchUser();
-  },[userProfile])
+  },[])
   
   return (
     <div className='sidebarContainer'>
