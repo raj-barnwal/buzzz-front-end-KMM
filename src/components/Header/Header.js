@@ -31,7 +31,7 @@ const Header = () => {
         <div className='nav-icon'>
           
           <div class="dropdown">
-            <span className='nav-icon-dot'><BsThreeDotsVertical /></span>
+            <span className='nav-icon-dot' ><BsThreeDotsVertical /></span>
               <div class="dropdown-content">
                 <Link to="/profile/update">Edit Profile</Link>
                 <Link to="/">Settings </Link>

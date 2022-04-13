@@ -9,11 +9,9 @@ import axios from 'axios';
 import Webcam from './components/Userprofile/Webcam';
 
 function App() {
-    const[userProfile, setUserProfile]= useState(false)
-
-     
-   
-        useEffect(()=>{
+    const[userProfile, setUserProfile]= useState(true)
+  
+         useEffect(()=>{
 
           fetchUser();
           console.log(userProfile);
@@ -35,12 +33,6 @@ function App() {
       success && setUserProfile(user)
     })
   }
-
-
-
-
-
-
   return (
     <div className="App">
       <Router>
@@ -69,6 +61,8 @@ function App() {
            <Route path='/login' element={ <Login/>}/>
            <Route  path='/register' element={<Home/>}/>
            <Route  path='/profile/:username' element={<ProfileSetup/>}/>
+           <Route exact path='/profile/update' element={<ProfileUpdate/>}/>
+          <Route exact path='/profile/update/webcam' element={<Webcam/>}/>
          </Routes>
       </Router>
     </div>
