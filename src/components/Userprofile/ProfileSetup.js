@@ -33,7 +33,7 @@ const ProfileSetup = () => {
       <div className='profileInfo'>
         <h4 className='profileInfoName'>{userProfile.name} </h4>
         <span className='profileInfoDesc'>{userProfile.description} </span>
-        <span className='profileInfoDesc2'> London<BsDot /> {userProfile.city} <BsDot /> {userProfile.hometown} <BsDot />{userProfile?.followers?.length} followers </span>
+        <span className='profileInfoDesc2'> <BsDot /> {userProfile.city} <BsDot /> {userProfile.hometown} <BsDot />{userProfile?.followers?.length} followers </span>
       </div>
       <div className='profilebutton'>
         <button className='addbutton'><MdPersonAddAlt1 className='profileIcon'/>Add Friend</button>
