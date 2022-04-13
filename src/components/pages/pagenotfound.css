@@ -1,0 +1,12 @@
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #000;
+    color: #ffff;
+}
+.container h1{
+    padding-left: 15px;
+}

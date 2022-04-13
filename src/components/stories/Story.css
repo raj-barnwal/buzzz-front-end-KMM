@@ -121,11 +121,40 @@ align-items: center;
     border-radius: 50%;
     object-fit: cover;
 }
-.input{
+.input-text{
     border: none;
     width:95%;
     height: 40px;
     padding-left: 10px;
     background-color: #F0F2F5;
-    border-radius: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.commentsection .comment-button{
+    width: 10%;
+    height: 40px;
+    background-color: #202020;
+    color: #E9E9E9;
+    /* width: 100%; */
+    border: none;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.comment-button button{
+    background-color: #00f0;
+    color: #E9E9E9;
+    width: 100%;
+    border-radius: 20%;
+  
+    
+}
+.input-text-comment{
+    border: none;
+    width:100%;
+    height: 40px;
+    padding-left: 20px;
+    background-color: #F0F2F5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
 }

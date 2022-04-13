@@ -31,7 +31,7 @@ const LoggedInUser = () => {
       <div className='profileInfo'>
         <h4 className='profileInfoName'>{user.name} </h4>
         <span className='profileInfoDesc'>{user.description} </span>
-        <span className='profileInfoDesc2'> London<BsDot /> {user.city} <BsDot /> {user.hometown} <BsDot />{user?.followers?.length} followers </span>
+        <span className='profileInfoDesc2'>  {user.city} <BsDot /> {user.hometown} <BsDot />{user?.followers?.length} followers </span>
       </div>
       <div className='profilebutton'>
         <button className='addbutton'><Link to={"/profile/update"}>Update Your Profile</Link></button>

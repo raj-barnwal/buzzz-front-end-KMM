@@ -10,6 +10,7 @@ import Webcam from './components/Userprofile/Webcam';
 import { AuthContext } from './context/AuthContext';
 import Register from './components/Login/Register';
 import LoggedInUser from './components/Userprofile/LoggedInUser';
+import PageNotFound from './components/pages/PageNotFound';
 
 function App() {
   const {user}= useContext(AuthContext);
@@ -73,9 +74,12 @@ function App() {
            <Route path='/login' element={ user ? <Navigate to="/"/> : <Login/>}/>
            <Route  path='/register' element={user ? <Navigate to="/"/> : <Register/>}/>
            <Route  path='/profile/:username' element={<ProfileSetup/>}/>
-           <Route exact path='/profile/update' element={<ProfileUpdate/>}/>
-          <Route exact path='/profile/update/webcam' element={<Webcam/>}/>
-          <Route exact path='/profile/loggedin' element={<LoggedInUser/>}/>
+           <Route  path='/profile/update' element={<ProfileUpdate/>}/>
+          <Route   path='/profile/update/webcam' element={<Webcam/>}/>
+          <Route  path='/profile/loggedin' element={<LoggedInUser/>}/>
+          <Route path="/pagenotfound" element={<PageNotFound/>}/>
+          <Route path="/*" element={<PageNotFound/>}/>
+
          </Routes>
          
       </Router>

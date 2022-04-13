@@ -18,9 +18,13 @@ const Story = (props) => {
     const [like ,setLike] =useState(null);
     const [isLiked ,setIsLiked] = useState(false);
     const { user: currentUser } = useContext(AuthContext);
-
+    const[comment, setComment]=useState("");
    
-    
+   const commentHandler=(e)=>{
+       setComment(e.target.value)
+        
+   }
+  
    
     useEffect(()=>{
       fetchUser();
@@ -85,7 +89,11 @@ const Story = (props) => {
                             </div> */}
                             <div className='commentsection'>
                                 <img className='profileimg' src={Profilepic1} alt='profile '/>
-                                <input className='input' placeholder="Write a Comment.." />
+                                <input className='input-text' placeholder="Write a Comment.." value={comment} onChange={commentHandler} ></input>
+                                <button className='comment-button'  >post</button>
+                            </div>
+                            <div className='commentsection'>
+                               <p className='input-text-comment'>{`${user.name}:  ${comment}`}</p>
                             </div>
                         </div>
                     </div>
