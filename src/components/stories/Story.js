@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 
 
 const Story = (props) => {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const [user, setUser]= useState({});
     const [likeFeed ,setLikeFeed] =useState(null);
     const [isLiked ,setIsLiked] = useState(false);
@@ -69,7 +70,7 @@ const Story = (props) => {
                             </div>
                             <div className='centerstory'>
                                 <span className='storyText'>{item?.description}</span>
-                                <img className='storypost' src={item?.image} />
+                                <img className='storypost' src={PF + item?.image} />
                             </div>
                             <div className='bottomstory'>
                                 <GrLike className='likeicon'onClick={getLikeFeedInfo} /><span>{likeFeed} liked it</span>

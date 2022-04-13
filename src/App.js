@@ -7,16 +7,19 @@ import { BrowserRouter  as Router, Route ,Routes, NavLink} from 'react-router-do
 import Home from './components/pages/Home';
 import ProfileSetup from './components/Userprofile/ProfileSetup';
 import ProfileUpdate from './components/Userprofile/ProfileUpdate';
+import axios from 'axios';
 
 function App() {
-    // const[userProfile, setUserProfile]= useState({})
+    const[userProfile, setUserProfile]= useState(false)
 
      
    
-    //     useEffect(()=>{
-    //       console.log("user Profile",userProfile)
-    //     })
-    const [isUser, setIsUser]= useState(true);
+        useEffect(()=>{
+
+          fetchUser();
+          console.log(userProfile);
+        })
+    // const [isUser, setIsUser]= useState(true);
   //   const[userProfile, setUserProfile]= useState({});
   
   //   setUserProfile({
@@ -24,13 +27,23 @@ function App() {
   //     profilePic: localStorage.getItem('profilePic')
       
   // })
+  const fetchUser=()=>{
+    axios.get("http://localhost:5000/auth/login/success",{
+      withCredentials:true
+    }).then((res)=>
+      res.data
+    ).then(({user, success})=>{
+      success && setUserProfile(user)
+    })
+  }
+
 
 
   return (
     <div className="App">
  
       <Router>
-        {isUser? 
+        {/* {userProfile?
         (<>
         <Routes>
           <Route exact path='/' element={<Home/>}/>
@@ -43,14 +56,14 @@ function App() {
              
               </Routes>
               </>)
-      }
-        {/* //  <Routes>
-        //   <Route exact path='/' element={<Home/>}/>
+      } */}
+          <Routes>
+           <Route exact path='/' element={<Home/>}/>
         
-        //   <Route exact path='/login' element={ <Login/>}/>
-        //   <Route exact path='/register' element={<Home/>}/>
-        //   <Route exact path='/profile/:username' element={<ProfileSetup/>}/>
-        // </Routes> */}
+           <Route path='/login' element={ <Login/>}/>
+           <Route  path='/register' element={<Home/>}/>
+           <Route  path='/profile/:username' element={<ProfileSetup/>}/>
+         </Routes>
       </Router>
     </div>
 

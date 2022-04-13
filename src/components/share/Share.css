@@ -45,3 +45,26 @@
  align-items: center;
  padding-left: 20px;
 }
+.Optionshare{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ShareOption2 {
+    width: 50%;
+   
+}
+.ShareOption2 button{
+    color: #F0F2F5;
+    background-color: #5BBE63;
+    width: 100%;
+    border-radius: 10%;
+    padding: 10px;
+    border: #5BBE63;
+}
+.ShareOption2 button:focus{
+  outline: #7ef888;
+}
+.input-share{
+    display: none;
+}
