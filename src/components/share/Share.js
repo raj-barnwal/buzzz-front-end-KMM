@@ -1,12 +1,14 @@
-import React, { useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import './Share.css'
 import {IoMdPhotos} from 'react-icons/io'
 import Person from '../../assets/images/person.png'
 import { async } from '@firebase/util'
 import axios from 'axios'
+import { AuthContext } from '../../context/AuthContext'
 
 const Share = () => {
-//    const PF = process.env.REACT_APP_PUBLIC_FOLDER; 
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER; 
+    const {user}=useContext(AuthContext);
     const desc = useRef();
     const [file, setFile] = useState(null);
     const clickhandler=async(e)=>{
@@ -40,7 +42,7 @@ const Share = () => {
     <div className='share'>
         <div className='shareWrapper'>
             <div className='Top-share'>
-                <img className='ShareImg' src={Person} alt='profile '/>
+                <img className='ShareImg' src={PF+user.profilePicture} alt='profile '/>
                 <input className='input' placeholder="Start your post..."  ref={desc}/>
                  <div className='sharebtn'>
                     <div className='Optionshare'>

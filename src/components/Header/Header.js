@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Ttnlogo from '../../assets/images/Ttn_logo(1).png'
 import {BsMessenger ,BsThreeDotsVertical} from 'react-icons/bs'
 import {HiUserAdd} from 'react-icons/hi'
 import './Header.css'
 import { Link,useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../context/AuthContext'
 
 const Header = () => {
+  const {user}=useContext(AuthContext);
+  const PF= process.env.REACT_APP_PUBLIC_FOLDER;
   const navigate =useNavigate();
     const logOut =() =>{
       localStorage.clear();
@@ -18,8 +21,9 @@ const Header = () => {
         </div>
       <div className='user-details'>
           <div className='profile-pic'>
-             <img className='profile-picImg' src={localStorage.getItem('profilePic')}/>
-             {localStorage.getItem('name')}
+            <Link to={"/"}> <img className='profile-picImg' src={PF + user.profilePicture}/></Link>
+            
+             {user.name}
           </div>
         <div className='nav-icon'>
             <BsMessenger />
