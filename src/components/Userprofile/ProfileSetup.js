@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from 'react'
+import React, { useContext, useEffect, useReducer, useState } from 'react'
 import './profile.css'
 import RightsideBar from '../rightsidebar/RightsideBar'
 import Story from '../stories/Story'
@@ -10,18 +10,48 @@ import {MdPersonAddAlt1} from 'react-icons/md'
 import {FiExternalLink} from 'react-icons/fi'
 import {BsDot} from 'react-icons/bs'
 import axios from 'axios'
+import { AuthContext } from '../../context/AuthContext'
+import { async } from '@firebase/util'
 
 
 const ProfileSetup = () => {
-  const [userProfile, setUserProfile]=useState({})
+  const [userProfile, setUserProfile]=useState({});
+  const {user, dispatcher}= useContext(AuthContext);
+  const followlen= user.following
+  
+  const[follow, setFollow]=useState([...followlen]);
+  const[checkF, setCheckF]=useState(false)
+  console.log("follow arry ",follow)
   useEffect(()=>{
-    const fetchUser= async()=>{
-      const result =await axios.get(`http://localhost:5000/api/users/6251871b34db952c4ebf5928`);
-      console.log("from user",result);
-      setUserProfile(result.data);
-    };
-    fetchUser();
-  },[userProfile])
+      fetchUser();
+  },[])
+  useEffect(()=>{
+    followHandler()
+  },[])
+  const fetchUser= async()=>{
+    
+    const result =await axios.get(`http://localhost:5000/api/users/6251871b34db952c4ebf5928`);
+    console.log("from user",result);
+    setUserProfile(result.data);
+  };
+ 
+  const followHandler=async()=>{
+    try{
+      if(follow.includes("6251871b34db952c4ebf5928")){
+        await axios.put(`http://localhost:5000/api/users/6251871b34db952c4ebf5928/unfollow`,{useId:user._id})
+        
+      }else{
+        await axios.put(`http://localhost:5000/api/users/6251871b34db952c4ebf5928/follow`,{useId:user._id})
+        setCheckF(true)
+  
+      }
+
+    }catch(err){
+      console.log(err)
+    }
+   
+  }
+  
   return (
     <>
     <Header />
@@ -38,8 +68,8 @@ const ProfileSetup = () => {
         <span className='profileInfoDesc2'> London<BsDot /> {userProfile.city} <BsDot /> {userProfile.hometown} <BsDot />{userProfile?.followers?.length} followers </span>
       </div>
       <div className='profilebutton'>
-        <button className='addbutton'><MdPersonAddAlt1 className='profileIcon'/>Add Friend</button>
-        <button className='visitbutton'><FiExternalLink className='profileVisitIcon'/>Visit Website</button>
+        <button className='addbutton' onClick={followHandler}><MdPersonAddAlt1 className='profileIcon'/>{checkF?"Unfollow":"follow"}</button>
+       
       </div>
     </div>
     </div> 

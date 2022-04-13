@@ -21,7 +21,7 @@ const Header = () => {
         </div>
       <div className='user-details'>
           <div className='profile-pic'>
-            <Link to={"/"}> <img className='profile-picImg' src={PF + user.profilePicture}/></Link>
+            <Link to={"/profile/loggedin"}> <img className='profile-picImg' src={PF + user.profilePicture}/></Link>
             
              {user.name}
           </div>

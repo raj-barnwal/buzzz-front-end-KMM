@@ -9,6 +9,7 @@ import axios from 'axios';
 import Webcam from './components/Userprofile/Webcam';
 import { AuthContext } from './context/AuthContext';
 import Register from './components/Login/Register';
+import LoggedInUser from './components/Userprofile/LoggedInUser';
 
 function App() {
   const {user}= useContext(AuthContext);
@@ -74,6 +75,7 @@ function App() {
            <Route  path='/profile/:username' element={<ProfileSetup/>}/>
            <Route exact path='/profile/update' element={<ProfileUpdate/>}/>
           <Route exact path='/profile/update/webcam' element={<Webcam/>}/>
+          <Route exact path='/profile/loggedin' element={<LoggedInUser/>}/>
          </Routes>
          
       </Router>
